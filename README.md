@@ -66,7 +66,11 @@ python3 -m http.server 8000
 
 ## 배포
 
-GitHub Pages: 저장소 `main` 브랜치의 `/ (root)`를 지정하면 `https://<계정>.github.io/korail-safety-app/` 으로 게시됩니다. 별도 빌드가 필요 없습니다.
+- 현재 게시 상태: `https://jotaebong99-afk.github.io/korail-safety-edu/` (GitHub Pages, `gh-pages` 브랜치 `/ (root)` 기준, HTTPS 적용)
+- **주의**: Pages 소스가 `gh-pages` 브랜치로 설정되어 있으므로 내용을 수정할 때는 `main`과 `gh-pages` 두 브랜치에 모두 반영해야 라이브 사이트가 갱신됩니다.
+  (`git push origin main:gh-pages`)
+- Pages 소스를 `main` 브랜치 `/ (root)`로 바꾸려면 저장소 **Settings → Pages → Branch**에서 지정하면 되고(관리자 권한 필요), URL은 그대로입니다.
+- 빌드 과정이 없는 정적 사이트이므로 별도 CI가 필요하지 않습니다.
 
 ## 한계
 
