@@ -1,0 +1,19 @@
+{
+  "name": "코레일 차량정비 안전교육·테스트",
+  "short_name": "차량정비 안전",
+  "description": "KOSHA 사망사고 고위험요인(SIF) 아카이브의 실제 재해사례로 학습하고 테스트하는 차량정비 안전교육 앱",
+  "lang": "ko",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f3f6fa",
+  "theme_color": "#0a2240",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>코레일 차량정비 안전교육·테스트</title>
+<meta name="description" content="KOSHA 사망사고 고위험요인(SIF) 아카이브의 실제 재해사례를 차량정비 현장에 맞춰 학습하고 테스트하는 안전교육 웹 앱입니다.">
+<meta name="theme-color" content="#0a2240">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="차량정비 안전">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 바로가기</a>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">🚆</span>
+      <span class="brand-text">
+        <strong>차량정비 안전교육</strong>
+        <small>KOSHA 재해사례 기반 · 코레일 차량정비</small>
+      </span>
+    </div>
+    <nav class="top-tabs" aria-label="주요 메뉴">
+      <button class="top-tab is-active" type="button" data-view="home">홈</button>
+      <button class="top-tab" type="button" data-view="learn">사고사례 학습</button>
+      <button class="top-tab" type="button" data-view="quiz">안전 테스트</button>
+      <button class="top-tab" type="button" data-view="tbm">TBM 체크리스트</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section id="view-home" class="view is-active" aria-labelledby="home-title">
+    <div class="hero">
+      <p class="hero-badge">산업안전보건공단(KOSHA) 공공데이터 기반</p>
+      <h1 id="home-title">코레일 차량정비<br>안전교육 · 테스트</h1>
+      <p class="hero-sub">실제 중대재해 사례 19건으로 익히는 끼임·감전·추락·크레인·구내선로 위험.
+        사례로 배우고, 테스트로 확인하고, TBM으로 작업 전 점검까지.</p>
+      <div class="hero-actions">
+        <button class="btn btn-amber" type="button" data-go="learn">사고사례 학습하기</button>
+        <button class="btn btn-ghost" type="button" data-go="quiz">안전 테스트 보기</button>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+      <article class="stat-card">
+        <p class="stat-label">내 학습 완료율</p>
+        <p class="stat-value"><span id="stat-learned">0</span><span class="stat-unit">/ <span id="stat-total">19</span>건</span></p>
+        <div class="bar" role="img" aria-label="학습 완료율" id="stat-learn-bar-wrap">
+          <span class="bar-fill" id="stat-learn-bar" style="width:0%"></span>
+        </div>
+        <p class="stat-foot" id="stat-learn-foot">학습한 사례가 없습니다.</p>
+      </article>
+
+      <article class="stat-card">
+        <p class="stat-label">최근 테스트 점수</p>
+        <p class="stat-value"><span id="stat-score">-</span><span class="stat-unit">점</span></p>
+        <p class="stat-foot" id="stat-score-foot">아직 응시 기록이 없습니다.</p>
+      </article>
+
+      <article class="stat-card">
+        <p class="stat-label">테스트 응시</p>
+        <p class="stat-value"><span id="stat-attempts">0</span><span class="stat-unit">회</span></p>
+        <p class="stat-foot" id="stat-pass-foot">합격 기준 80점</p>
+      </article>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>이렇게 활용하세요</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>사고사례 학습</strong> 위험 유형별로 실제 KOSHA 재해사례의 재해개요·기인물·발생요인·위험성 감소대책을 읽고 ‘학습 완료’를 체크합니다.</li>
+        <li><strong>안전 테스트</strong> 사례 기반 4지선다 문제를 풀고, 선택 즉시 정답과 해당 사례 해설을 확인합니다. 80점 이상이면 합격입니다.</li>
+        <li><strong>TBM 체크리스트</strong> 차량정비 착수 전 LOTO·검전·안전블록·안전대·줄걸이·열차감시원 항목을 점검합니다.</li>
+      </ol>
+    </div>
+
+    <div class="panel source-panel">
+      <div class="panel-head">
+        <h2>공공데이터 출처</h2>
+        <span class="chip chip-soft">원문 인용</span>
+      </div>
+      <dl class="source-list">
+        <div><dt>데이터</dt><dd id="src-name">한국산업안전보건공단_사망사고 고위험요인(SIF) 아카이브</dd></div>
+        <div><dt>제공기관</dt><dd id="src-provider">한국산업안전보건공단</dd></div>
+        <div><dt>범위</dt><dd id="src-coverage">2016~2023년 중대재해 6,032건</dd></div>
+        <div><dt>이용허락</dt><dd id="src-license">공공저작물 제3유형 — 출처표시, 변경금지</dd></div>
+        <div><dt>조회일</dt><dd id="src-retrieved">2026-11-18</dd></div>
+      </dl>
+      <p class="source-links">
+        <a id="link-data" href="https://www.data.go.kr/data/15140383/fileData.do" target="_blank" rel="noopener">공공데이터포털 원문 보기</a>
+        <a id="link-file" href="https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20260400196" target="_blank" rel="noopener">고용노동부 배포 파일</a>
+      </p>
+      <p class="source-note">
+        이 앱의 재해개요·기인물·고위험작업·재해유발요인·위험성 감소대책은 원문 데이터를 수정 없이 그대로 인용했습니다.
+        사례별 ‘차량정비 적용 포인트’, ‘관련 법규’ 해설, 테스트 문항, TBM 체크리스트는 이 앱을 위해 별도로 작성한 내용이며 원문 데이터와 구분해 표시했습니다.
+        원문 자료는 동종재해 예방 목적으로 제공되며, 일부 내용이 실제 재해 상황과 다를 수 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <section id="view-learn" class="view" aria-labelledby="learn-title">
+    <div class="view-head">
+      <div>
+        <h1 id="learn-title">사고사례 학습</h1>
+        <p class="view-sub">KOSHA 중대재해 사례 <strong id="learn-total">19</strong>건을 위험 유형별로 학습합니다.</p>
+      </div>
+      <p class="learn-progress" id="learn-progress">0 / 19 완료</p>
+    </div>
+
+    <div class="filter-row" id="filter-row" role="group" aria-label="위험 유형 필터"></div>
+
+    <div class="legend">
+      <span class="legend-item"><i class="dot dot-open" aria-hidden="true"></i>사례 카드를 누르면 상세 내용이 열립니다.</span>
+    </div>
+
+    <div id="case-list" class="case-list"></div>
+    <p class="empty" id="learn-empty" hidden>해당 유형의 사례가 없습니다.</p>
+  </section>
+
+  <section id="view-quiz" class="view" aria-labelledby="quiz-title">
+    <div class="view-head">
+      <div>
+        <h1 id="quiz-title">안전 테스트</h1>
+        <p class="view-sub">학습한 KOSHA 사례 기반 4지선다 · <strong>80점 이상 합격</strong></p>
+      </div>
+    </div>
+    <div id="quiz-root"></div>
+  </section>
+
+  <section id="view-tbm" class="view" aria-labelledby="tbm-title">
+    <div class="view-head">
+      <div>
+        <h1 id="tbm-title">작업 전 TBM 체크리스트</h1>
+        <p class="view-sub">차량정비 착수 전 필수 점검 항목 <strong id="tbm-total">38</strong>개</p>
+      </div>
+      <button class="btn btn-ghost btn-sm" type="button" id="tbm-reset">전체 초기화</button>
+    </div>
+    <div class="tbm-status" id="tbm-status"></div>
+    <div id="tbm-root" class="tbm-root"></div>
+    <p class="save-note">체크 상태는 이 기기의 브라우저(localStorage)에만 저장됩니다. 실제 TBM 기록은 사업장 절차에 따라 별도 보관하세요.</p>
+  </section>
+</main>
+
+<nav class="tabbar" aria-label="하단 메뉴">
+  <button class="tab is-active" type="button" data-view="home">
+    <span class="tab-icon" aria-hidden="true">🏠</span><span class="tab-label">홈</span>
+  </button>
+  <button class="tab" type="button" data-view="learn">
+    <span class="tab-icon" aria-hidden="true">📚</span><span class="tab-label">학습</span>
+  </button>
+  <button class="tab" type="button" data-view="quiz">
+    <span class="tab-icon" aria-hidden="true">📝</span><span class="tab-label">테스트</span>
+  </button>
+  <button class="tab" type="button" data-view="tbm">
+    <span class="tab-icon" aria-hidden="true">✅</span><span class="tab-label">TBM</span>
+  </button>
+</nav>
+
+<noscript><p class="noscript">이 앱은 JavaScript가 필요합니다. 브라우저 설정에서 JavaScript를 허용해 주세요.</p></noscript>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

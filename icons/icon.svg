@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="차량정비 안전교육 앱 아이콘">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06182c"/>
+      <stop offset="0.55" stop-color="#0a2240"/>
+      <stop offset="1" stop-color="#0b5495"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- 레일 -->
+  <g stroke="#e8f1fb" stroke-width="18" stroke-linecap="round" opacity="0.92">
+    <line x1="168" y1="96" x2="168" y2="416"/>
+    <line x1="344" y1="96" x2="344" y2="416"/>
+  </g>
+  <g stroke="#8fb6dc" stroke-width="14" stroke-linecap="round" opacity="0.7">
+    <line x1="140" y1="150" x2="372" y2="150"/>
+    <line x1="140" y1="214" x2="372" y2="214"/>
+    <line x1="140" y1="278" x2="372" y2="278"/>
+    <line x1="140" y1="342" x2="372" y2="342"/>
+  </g>
+  <!-- 안전 방패 -->
+  <path d="M256 148 L352 186 V284 C352 340 306 372 256 392 C206 372 160 340 160 284 V186 Z"
+        fill="#f2a01d" stroke="#0a2240" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M206 272 L244 312 L312 224" fill="none" stroke="#0a2240" stroke-width="26"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
