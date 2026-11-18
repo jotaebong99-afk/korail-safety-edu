@@ -178,6 +178,11 @@ main { max-width: var(--max); margin: 0 auto; padding: 20px 20px 8px; }
 .steps li { margin-bottom: 8px; }
 .steps li strong { color: var(--rail-600); }
 .chip-soft { background: var(--rail-050); color: var(--rail-600); }
+.badge-soft {
+  display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .01em;
+  color: var(--rail-600); background: var(--rail-050); border: 1px solid #d3e4f7;
+  padding: 4px 11px; border-radius: 999px;
+}
 
 .source-list { margin: 0; display: grid; gap: 8px; }
 .source-list > div { display: flex; gap: 12px; font-size: 14px; }
